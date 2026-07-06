@@ -197,43 +197,43 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* ACTION BUTTONS */}
-              <div className="mt-6 flex flex-wrap gap-3">
+            {/* ACTION BUTTONS */}
+<div className="mt-6 flex flex-wrap gap-3">
 
-                {project.prototype && (
-                  <a
-                    href={project.prototype}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-purple-500/20 border border-purple-400/30 px-5 py-2 text-sm font-medium text-purple-300 hover:bg-purple-500/30 transition-all duration-300 hover:scale-105"
-                  >
-                    View Prototype
-                  </a>
-                )}
+  {project.prototype && (
+    <a
+      href={project.prototype}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-full bg-purple-600 border border-purple-500 px-5 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-purple-500 hover:scale-105"
+    >
+      View Prototype
+    </a>
+  )}
 
-                {project.report && (
-                  <a
-                    href={project.report}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-cyan-500/20 border border-cyan-400/30 px-5 py-2 text-sm font-medium text-cyan-300 hover:bg-cyan-500/30 transition-all duration-300 hover:scale-105"
-                  >
-                    View Report
-                  </a>
-                )}
+  {project.report && (
+    <a
+      href={project.report}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-full bg-amber-600 border border-amber-500 px-5 py-2 text-sm font-medium text-slate-950 transition-all duration-300 hover:bg-amber-500 hover:scale-105"
+    >
+      View Report
+    </a>
+  )}
 
-                {project.dashboard && (
-                  <a
-                    href={project.dashboard}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 border border-emerald-400/30 px-5 py-2 text-sm font-medium text-emerald-300 hover:bg-emerald-500/30 transition-all duration-300 hover:scale-105"
-                  >
-                    View KPI Dashboard
-                  </a>
-                )}
+  {project.dashboard && (
+    <a
+      href={project.dashboard}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-full bg-cyan-600 border border-cyan-500 px-5 py-2 text-sm font-medium text-slate-950 transition-all duration-300 hover:bg-cyan-500 hover:scale-105"
+    >
+      View KPI Dashboard
+    </a>
+  )}
 
-              </div>
+</div>
 
             </div>
           </motion.div>

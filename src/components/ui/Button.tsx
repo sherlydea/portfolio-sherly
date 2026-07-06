@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { ReactNode } from "react";
 
 interface ButtonProps {
@@ -27,13 +26,8 @@ export default function Button({
       }
     >
       {children}
-
-      {variant === "primary" && (
-        <ArrowRight
-          size={18}
-          className="transition group-hover:translate-x-1"
-        />
-      )}
+      
+      {/* Bagian ikon ArrowRight di sini sudah dihapus bersih */}
     </motion.button>
   );
 }
