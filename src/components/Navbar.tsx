@@ -150,11 +150,11 @@ export default function Navbar() {
               ))}
 
               <a
-                href="/CV-Sherly.pdf"
+                href="/CV-sherly-dea-aulia.pdf"
                 target="_blank"
                 className="mt-4 rounded-xl bg-cyan-400 text-slate-950 py-3 text-center font-semibold hover:bg-cyan-300 transition"
               >
-                Download CV
+                View CV
               </a>
 
             </div>
