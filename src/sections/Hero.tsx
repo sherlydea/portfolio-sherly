@@ -144,7 +144,7 @@ export default function Hero() {
                       <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-400"></span>
                     </span>
                     <span className="text-sm font-medium text-emerald-300">
-                      Available for Internship
+                      Open for Internship Opportunities
                     </span>
                   </div>
                 </div>
