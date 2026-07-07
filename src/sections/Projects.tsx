@@ -60,27 +60,6 @@ const PROJECTS = [
     tech: ["Figma"],
     prototype: "https://www.figma.com/proto/7UKsXSa3iNe1ue3Z9URBio/UI-UX-TANIMATE?node-id=0-1&t=ni9bi3fD0VD9sjYf-1",
   },
-  {
-    title: "Analisis Infrastruktur TI J&T Cargo Menganti",
-    subtitle: "IT Infrastructure Analysis",
-    image: "/images/projects/jnt-cargo.png",
-    description:
-      "Melakukan analisis infrastruktur teknologi informasi pada J&T Cargo Menganti untuk mengidentifikasi kondisi infrastruktur saat ini serta memberikan rekomendasi perbaikan.",
-    role: ["System Analysis"],
-    tech: ["Documentation"],
-    report: "/reports/jnt-cargo.pdf",
-  },
-  {
-    title: "Perencanaan Sistem Informasi EQ-Math",
-    subtitle: "Information System Planning",
-    image: "/images/projects/eqmath-pkti.png",
-    description:
-      "Melakukan perencanaan sistem informasi untuk lembaga bimbingan belajar EQ-Math, meliputi identifikasi kebutuhan bisnis dan penyusunan rancangan solusi sistem.",
-    role: ["System Analysis"],
-    tech: ["Documentation"],
-    report: "/reports/eq-math-pkti.pdf",
-    dashboard: "https://v0-it-kpi-dashboard.vercel.app/",
-  },
 ];
 
 export default function Projects() {
@@ -213,27 +192,7 @@ export default function Projects() {
                       </a>
                     )}
 
-                    {project.report && (
-                      <a
-                        href={project.report}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center rounded-xl bg-slate-800 px-6 py-3.5 text-xs font-bold tracking-wider text-[#FF8B72] transition-all duration-200 hover:bg-[#FF8B72] hover:text-[#0B0F17] hover:-translate-y-0.5 active:translate-y-0 shadow-md border border-slate-700"
-                      >
-                        View Report
-                      </a>
-                    )}
-
-                    {project.dashboard && (
-                      <a
-                        href={project.dashboard}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center rounded-xl bg-slate-800 px-6 py-3.5 text-xs font-bold tracking-wider text-[#CCFF00] transition-all duration-200 hover:bg-[#CCFF00] hover:text-[#0B0F17] hover:-translate-y-0.5 active:translate-y-0 shadow-md border border-slate-700"
-                      >
-                        View KPI Dashboard
-                      </a>
-                    )}
+            
                   </div>
 
                 </div>
