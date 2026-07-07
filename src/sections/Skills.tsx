@@ -6,8 +6,6 @@ import {
   FaWrench,
   FaLayerGroup,
   FaDatabase,
-  FaProjectDiagram,
-  FaUserFriends,
   FaPhp,
   FaJava,
   FaJs,
@@ -18,11 +16,7 @@ import {
   FaLaptopCode,
   FaTerminal,
   FaServer,
-  FaFileInvoice,
-  FaBrain,
-  FaComments,
-  FaClock,
-  FaSyncAlt,
+  FaPalette, // Menggunakan FaPalette sebagai pengganti ikon Canva agar aman dari error versi
 } from "react-icons/fa";
 import { 
   SiKotlin, 
@@ -55,14 +49,14 @@ const sections = [
     accentColor: "group-hover:border-[#FF8B72]/40",
     titleColor: "text-[#FF8B72]",
     items: [
-      { name: "VSCode", icon: <FaLaptopCode size={14} /> }, // Menggunakan FaLaptopCode yang aman dari error
+      { name: "VSCode", icon: <FaLaptopCode size={14} /> },
       { name: "Android Studio", icon: <SiAndroidstudio size={14} /> },
       { name: "NetBeans", icon: <FaLaptopCode size={14} /> },
       { name: "Laragon", icon: <FaTerminal size={14} /> },
       { name: "GitHub", icon: <FaGithub size={14} /> },
       { name: "Figma", icon: <FaFigma size={14} /> },
+      { name: "Canva", icon: <FaPalette size={14} /> },
       { name: "XAMPP", icon: <FaServer size={14} /> },
-      { name: "Microsoft Office", icon: <FaFileInvoice size={14} /> },
     ],
   },
   {
@@ -82,36 +76,6 @@ const sections = [
     titleColor: "text-[#CCFF00]",
     items: [
       { name: "MySQL", icon: <SiMysql size={16} /> },
-      { name: "phpMyAdmin", icon: <FaDatabase size={13} /> },
-      { name: "HeidiSQL", icon: <FaDatabase size={13} /> },
-    ],
-  },
-  {
-    title: "Analisis Sistem",
-    icon: <FaProjectDiagram className="text-[#FF8B72]" />,
-    accentColor: "group-hover:border-[#FF8B72]/40",
-    titleColor: "text-[#FF8B72]",
-    items: [
-      { name: "Requirement Gathering", icon: <FaFileInvoice size={13} /> },
-      { name: "Analisis Proses Bisnis", icon: <FaProjectDiagram size={13} /> },
-      { name: "Flowchart", icon: <FaProjectDiagram size={13} /> },
-      { name: "Use Case Diagram", icon: <FaProjectDiagram size={13} /> },
-      { name: "Activity Diagram", icon: <FaProjectDiagram size={13} /> },
-      { name: "Entity Relationship Diagram (ERD)", icon: <FaDatabase size={13} /> },
-      { name: "Perancangan Basis Data", icon: <FaDatabase size={13} /> },
-    ],
-  },
-  {
-    title: "Soft Skills",
-    icon: <FaUserFriends className="text-[#E3D5CA]" />,
-    accentColor: "group-hover:border-[#E3D5CA]/40",
-    titleColor: "text-[#E3D5CA]",
-    items: [
-      { name: "Problem Solving", icon: <FaBrain size={13} /> },
-      { name: "Komunikasi", icon: <FaComments size={13} /> },
-      { name: "Kerja Sama Tim", icon: <FaUserFriends size={13} /> },
-      { name: "Manajemen Waktu", icon: <FaClock size={13} /> },
-      { name: "Adaptasi", icon: <FaSyncAlt size={13} /> },
     ],
   },
 ];
@@ -152,7 +116,7 @@ export default function Skills() {
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">Skills &amp; Tools</h2>
           <p className="text-slate-400 mt-4 max-w-xl mx-auto text-base">
-            Keterampilan teknis, perangkat analisis, dan soft skills yang saya gunakan untuk mendukung operasional IT.
+            Keterampilan teknis, perangkat analisis, dan solusi digital yang saya gunakan untuk mendukung operasional IT.
           </p>
         </motion.div>
 
@@ -186,7 +150,7 @@ export default function Skills() {
                     key={item.name}
                     className="inline-flex items-center gap-2 text-sm px-3.5 py-2 rounded-2xl bg-[#0B0F17]/80 border border-slate-800 text-slate-300 transition-all duration-200 hover:text-white hover:border-slate-700 hover:bg-[#121722]"
                   >
-                    <span className="text-slate-400 group-hover:text-inherit">
+                    <span className="text-slate-400 group-hover:text-inherit flex items-center justify-center">
                       {item.icon}
                     </span>
                     <span className="font-medium">{item.name}</span>

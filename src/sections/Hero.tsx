@@ -8,8 +8,8 @@ import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaHeadset,
-  FaChartBar,
+  FaCode,
+  FaMobileAlt,
   FaPalette,
 } from "react-icons/fa";
 
@@ -20,74 +20,87 @@ export default function Hero() {
     });
   };
 
-  // WARNA STICKER DIUBAH MENJADI KOMBINASI MATCHA-SALMON-GOLD YANG UNIK
   const stickers = [
-    {
-      icon: <FaHeadset size={14} />,
-      label: "IT Support",
-      rotate: "-rotate-6",
-      pos: "-top-5 md:-left-6 left-0",
-      color: "text-[#0B0F17] bg-[#CCFF00]", // Neon Matcha
-      delay: 0,
-    },
-    {
-      icon: <FaChartBar size={14} />,
-      label: "System Analysis",
-      rotate: "rotate-3",
-      pos: "top-1/2 md:-right-8 right-0 md:-translate-y-1/2",
-      color: "text-white bg-[#FF8B72]", // Salty Salmon
-      delay: 0.6,
-    },
     {
       icon: <FaPalette size={14} />,
       label: "UI/UX Design",
+      rotate: "-rotate-6",
+      pos: "-top-5 md:-left-6 left-0",
+      color: "text-[#0B0F17] bg-[#CCFF00]",
+      delay: 0,
+    },
+    {
+      icon: <FaCode size={14} />,
+      label: "Web Development",
+      rotate: "rotate-3",
+      pos: "top-1/2 md:-right-8 right-0 md:-translate-y-1/2",
+      color: "text-white bg-[#FF8B72]",
+      delay: 0.6,
+    },
+    {
+      icon: <FaMobileAlt size={14} />,
+      label: "Mobile Development",
       rotate: "rotate-6",
       pos: "-bottom-5 md:-left-4 left-0",
-      color: "text-[#0B0F17] bg-[#E3D5CA]", // Creamy Gold
+      color: "text-[#0B0F17] bg-[#E3D5CA]",
       delay: 1.2,
     },
   ];
 
   return (
     <section className="relative min-h-screen bg-[#0B0F17] overflow-hidden">
-      {/* DOT GRID BACKGROUND */}
+
+      {/* Background */}
       <div
-        className="absolute inset-0 opacity-[0.2]"
+        className="absolute inset-0 opacity-[0.18]"
         style={{
           backgroundImage:
-            "radial-gradient(rgba(204,255,0,.3) 1.5px, transparent 1.5px)",
+            "radial-gradient(rgba(204,255,0,.25) 1.5px, transparent 1.5px)",
           backgroundSize: "30px 30px",
         }}
       />
 
-      {/* SOFT BLOBS WITH NEW COMPLEMENTARY COLORS */}
-      <div className="absolute -top-32 -left-32 w-[300px] md:w-[420px] h-[300px] md:h-[420px] rounded-full bg-[#CCFF00]/5 blur-[100px]" />
-      <div className="absolute top-1/3 -right-24 w-[280px] md:w-[380px] h-[280px] md:h-[380px] rounded-full bg-[#FF8B72]/5 blur-[100px]" />
-      <div className="absolute bottom-0 left-1/3 w-[260px] md:w-[360px] h-[260px] md:h-[360px] rounded-full bg-[#E3D5CA]/5 blur-[100px]" />
+      {/* Glow */}
+      <div className="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full bg-[#CCFF00]/5 blur-[110px]" />
+      <div className="absolute top-1/3 -right-24 w-[380px] h-[380px] rounded-full bg-[#FF8B72]/5 blur-[110px]" />
+      <div className="absolute bottom-0 left-1/3 w-[360px] h-[360px] rounded-full bg-[#E3D5CA]/5 blur-[110px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen pt-24 pb-12 lg:pt-28">
-          {/* ================= LEFT COLUMN ================= */}
+
+          {/* ================= LEFT ================= */}
+
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-xl w-full order-2 lg:order-1"
           >
+
             {/* LABEL */}
-            <span className="inline-flex items-center gap-2 font-mono uppercase tracking-[0.35em] text-[#CCFF00] text-[10px] sm:text-xs">
+
+            <span className="inline-flex items-center gap-2 font-mono uppercase tracking-[0.32em] text-[#CCFF00] text-[10px] sm:text-xs">
+
               <span className="w-1.5 h-1.5 rounded-full bg-[#CCFF00] animate-pulse" />
-              Information Systems Student
+
+              Information Systems Student • UI/UX Enthusiast
+
             </span>
 
             {/* NAME */}
-            <h1 className="mt-4 md:mt-6 leading-none relative">
+
+            <h1 className="mt-5 md:mt-6 leading-none">
+
               <span className="block text-white text-5xl sm:text-7xl xl:text-8xl font-extrabold tracking-tight">
+
                 Sherly
+
               </span>
+
               <span className="relative inline-block mt-2 text-5xl sm:text-7xl xl:text-8xl font-extrabold bg-gradient-to-r from-[#FF8B72] via-[#E3D5CA] to-[#CCFF00] bg-clip-text text-transparent">
+
                 Dea Aulia
-                {/* SQUIGGLE DOODLE */}
+
                 <svg
                   viewBox="0 0 300 20"
                   className="absolute -bottom-2 left-0 w-full h-3 md:h-4"
@@ -100,91 +113,119 @@ export default function Hero() {
                     strokeLinecap="round"
                   />
                 </svg>
+
               </span>
+
             </h1>
 
             {/* HEADLINE */}
-            <h2 className="mt-10 md:mt-12 text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
-              Ready to support{" "}
-              <br className="md:hidden" />
-              <span className="text-[#CCFF00]">your IT operations.</span>
+
+            <h2 className="mt-10 text-3xl md:text-4xl font-bold text-white leading-tight">
+
+              Creating
+              <br />
+
+              <span className="text-[#CCFF00]">
+                Digital Products
+              </span>
+
+              <br />
+
+              That Matter.
+
             </h2>
 
             {/* DESCRIPTION */}
-            <p className="mt-6 md:mt-8 text-base sm:text-lg leading-7 sm:leading-8 text-slate-400">
-              Mahasiswa Sistem Informasi UPN &quot;Veteran&quot; Jawa Timur yang memiliki minat
-              pada bidang{" "}
-              <span className="inline-flex items-center rounded-full bg-[#CCFF00]/10 border border-[#CCFF00]/30 px-2.5 py-0.5 text-[#CCFF00] font-medium text-sm">
-                IT Support
-              </span>{" "}
-              <span className="inline-flex items-center rounded-full bg-[#FF8B72]/10 border border-[#FF8B72]/30 px-2.5 py-0.5 text-[#FF8B72] font-medium text-sm">
-                System Analysis
-              </span>{" "}
-              dan{" "}
-              <span className="inline-flex items-center rounded-full bg-[#E3D5CA]/10 border border-[#E3D5CA]/30 px-2.5 py-0.5 text-[#E3D5CA] font-medium text-sm">
-                UI/UX Design
-              </span>
-              . Saya senang mempelajari hal baru, mampu bekerja sama dalam tim,
-              cepat beradaptasi dengan lingkungan kerja, serta berkomitmen
-              memberikan hasil terbaik dalam setiap tanggung jawab yang diberikan.
+
+            <p className="mt-7 text-base sm:text-lg leading-8 text-slate-400">
+
+              Mahasiswa Sistem Informasi UPN "Veteran" Jawa Timur dengan latar belakang Multimedia yang memiliki ketertarikan pada
+              <span className="text-[#CCFF00] font-medium"> UI/UX Design</span>,
+              <span className="text-[#FF8B72] font-medium"> Web Development</span>,
+              <span className="text-[#E3D5CA] font-medium"> Mobile Development</span>,
+              dan <span className="text-white font-medium">System Analysis</span>.
+              Saya menikmati proses memahami kebutuhan pengguna, merancang antarmuka yang intuitif, serta mengembangkan solusi digital yang fungsional melalui kolaborasi dan pembelajaran yang berkelanjutan.
+
             </p>
 
-            {/* ACTION & SOCIAL BUTTONS */}
-            <div className="mt-10 md:mt-12 mb-8 lg:mb-20 flex flex-wrap items-center gap-4 sm:gap-6">
+            {/* BUTTON & SOCIAL */}
+
+            <div className="mt-10 flex flex-wrap items-center gap-5">
+
               <button
                 onClick={scrollToProjects}
-                className="inline-flex items-center rounded-xl bg-slate-800 px-5 sm:px-6 py-3 sm:py-3.5 text-xs font-bold tracking-wider text-[#CCFF00] transition-all duration-200 hover:bg-[#CCFF00] hover:text-[#0B0F17] hover:-translate-y-0.5 active:translate-y-0 shadow-md border border-slate-700 cursor-pointer w-full sm:w-auto justify-center"
+                className="inline-flex items-center justify-center rounded-xl bg-slate-800 px-6 py-3 text-sm font-semibold tracking-wide text-[#CCFF00] border border-slate-700 hover:bg-[#CCFF00] hover:text-[#0B0F17] transition-all duration-300"
               >
-                View My Projects
+
+                Explore My Projects
+
               </button>
 
-              <div className="flex items-center justify-center gap-4 w-full sm:w-auto">
+              <div className="flex items-center gap-4">
+
                 <SocialButton
                   href="https://github.com/sherlydea"
                   icon={<FaGithub size={20} />}
                 />
+
                 <SocialButton
                   href="https://www.linkedin.com/in/sherly-dea-aulia-17aa483b1/"
                   icon={<FaLinkedin size={20} />}
                 />
+
                 <SocialButton
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=sherlydeaauliaa@gmail.com"
                   icon={<FaEnvelope size={20} />}
                 />
-              </div>
-            </div>
-          </motion.div>
 
-          {/* ================= RIGHT COLUMN ================= */}
+              </div>
+
+            </div>
+
+          </motion.div>
+                    {/* ================= RIGHT ================= */}
+
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex justify-center lg:justify-end order-1 lg:order-2 w-full pt-6 lg:pt-0"
+            className="flex justify-center lg:justify-end order-1 lg:order-2"
           >
-            <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px] px-2 sm:px-0">
-              {/* FLOATING STICKERS (Disembunyikan di HP agar tidak meluap terpotong) */}
-              {stickers.map((s, i) => (
+
+            <div className="relative w-full max-w-[470px]">
+
+              {/* Floating Stickers */}
+
+              {stickers.map((item) => (
                 <motion.div
-                  key={i}
-                  animate={{ y: [0, -8, 0] }}
+                  key={item.label}
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{
-                    duration: 3.5,
-                    repeat: Infinity,
-                    delay: s.delay,
-                    ease: "easeInOut",
+                    duration: 0.5,
+                    delay: item.delay,
                   }}
-                  className={`hidden md:flex absolute z-20 ${s.pos} ${s.rotate} ${s.color} items-center gap-2 rounded-2xl border-2 border-white/80 px-3.5 py-2 text-xs font-bold shadow-lg`}
+                  className={`absolute ${item.pos} z-20 ${item.rotate}`}
                 >
-                  {s.icon}
-                  {s.label}
+                  <div
+                    className={`flex items-center gap-2 rounded-full px-4 py-2 shadow-xl ${item.color}`}
+                  >
+                    {item.icon}
+                    <span className="text-xs font-bold whitespace-nowrap">
+                      {item.label}
+                    </span>
+                  </div>
                 </motion.div>
               ))}
 
               {/* CARD */}
-              <div className="relative overflow-hidden rounded-[36px] sm:rounded-[48px_16px_48px_16px] border border-white/10 bg-[#171B26]/80 backdrop-blur-xl">
-                {/* PHOTO (Ketinggian adaptif sesuai ukuran layar gadget) */}
-                <div className="relative h-[440px] sm:h-[520px] lg:h-[600px] w-full">
+
+              <div className="relative overflow-hidden rounded-[36px] border border-slate-800 bg-[#111827]/80 backdrop-blur-xl">
+
+                {/* PHOTO */}
+
+                <div className="relative h-[620px]">
+
                   <Image
                     src="/images/profil-sherly.png"
                     alt="Sherly Dea Aulia"
@@ -192,44 +233,63 @@ export default function Hero() {
                     priority
                     className="object-cover object-top"
                   />
+
                 </div>
 
-                {/* STATUS OVERLAY (Kapsul Hijau Awal - Dibuat Fleksibel & Rapi di Layar Kecil) */}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0B0F17] via-[#0B0F17]/80 to-transparent px-4 sm:px-8 pb-6 sm:pb-8 pt-20 flex justify-center">
-                  <div className="inline-flex items-center justify-center gap-2.5 sm:gap-3 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 sm:px-5 py-2 max-w-full">
-                    <span className="relative flex h-2.5 w-2.5 shrink-0">
-                      <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 animate-ping"></span>
-                      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+                {/* Overlay */}
+
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0B0F17] via-[#0B0F17]/80 to-transparent px-8 pb-8 pt-24">
+
+                  <div className="inline-flex items-center gap-3 rounded-full border border-[#CCFF00]/30 bg-[#CCFF00]/10 px-5 py-2">
+
+                    <span className="relative flex h-3 w-3">
+
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-[#CCFF00] animate-ping"></span>
+
+                      <span className="relative inline-flex h-3 w-3 rounded-full bg-[#CCFF00]"></span>
+
                     </span>
-                    <span className="text-xs sm:text-sm font-medium text-emerald-300 whitespace-normal text-center sm:text-left">
-                      Open for Internship Opportunities
+
+                    <span className="text-sm font-medium text-[#CCFF00]">
+                      Open to Internship
                     </span>
+
                   </div>
+
                 </div>
+
               </div>
+
             </div>
+
           </motion.div>
+
         </div>
+
       </div>
 
-      {/* SCROLL INDICATOR */}
+      {/* Scroll Indicator */}
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.8 }}
+        transition={{
+          delay: 1,
+          duration: 0.8,
+        }}
         className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2"
       >
+
         <span className="font-mono uppercase tracking-[0.4em] text-[10px] text-slate-500">
-          scroll
+
+          SCROLL
+
         </span>
-        <div className="relative w-6 h-10 rounded-full border-2 border-[#E3D5CA]/40 flex justify-center pt-2">
-          <motion.div
-            animate={{ y: [0, 14, 0] }}
-            transition={{ duration: 1.4, repeat: Infinity }}
-            className="w-1.5 h-1.5 rounded-full bg-[#E3D5CA]"
-          />
-        </div>
+
+        <div className="w-px h-10 bg-gradient-to-b from-[#CCFF00] to-transparent"></div>
+
       </motion.div>
+
     </section>
   );
 }

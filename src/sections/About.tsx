@@ -1,41 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FaMapMarkerAlt,
-  FaBriefcase,
-  FaGraduationCap,
-  FaLaptopCode,
-} from "react-icons/fa";
 
-const FOCUS_ITEMS = [
+const SERVICES = [
   {
-    code: "01",
+    number: "01",
     title: "System Analysis",
-    desc: "Memetakan proses & kebutuhan sistem secara terstruktur.",
-    color: "group-hover:border-[#CCFF00]/40",
-    accent: "group-hover:via-[#CCFF00]/50"
+    description:
+      "Menganalisis kebutuhan pengguna, proses bisnis, serta menyusun solusi sistem yang sesuai dengan tujuan organisasi.",
   },
   {
-    code: "02",
-    title: "Business Process Analysis",
-    desc: "Menelaah alur bisnis untuk menemukan celah perbaikan.",
-    color: "group-hover:border-[#FF8B72]/40",
-    accent: "group-hover:via-[#FF8B72]/50"
-  },
-  {
-    code: "03",
+    number: "02",
     title: "UI/UX Design",
-    desc: "Merancang antarmuka yang jelas dan mudah digunakan.",
-    color: "group-hover:border-[#E3D5CA]/40",
-    accent: "group-hover:via-[#E3D5CA]/50"
+    description:
+      "Merancang antarmuka yang sederhana, konsisten, dan memberikan pengalaman penggunaan yang nyaman.",
   },
   {
-    code: "04",
-    title: "Software Development",
-    desc: "Menerjemahkan rancangan menjadi aplikasi yang berjalan.",
-    color: "group-hover:border-[#CCFF00]/40",
-    accent: "group-hover:via-[#CCFF00]/50"
+    number: "03",
+    title: "Web Development",
+    description:
+      "Mengembangkan aplikasi web yang responsif menggunakan teknologi modern sesuai kebutuhan pengguna.",
+  },
+  {
+    number: "04",
+    title: "Mobile Development",
+    description:
+      "Membangun aplikasi mobile serta prototype yang berfokus pada kemudahan penggunaan dan efisiensi.",
   },
 ];
 
@@ -43,9 +33,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative bg-[#0B0F17] overflow-hidden py-32"
+      className="relative overflow-hidden bg-[#0B0F17] py-32"
     >
-      {/* DOT GRID BACKGROUND — Menyelaraskan dengan Blueprint Hero baru */}
+      {/* Background */}
       <div
         className="absolute inset-0 opacity-[0.15]"
         style={{
@@ -55,120 +45,136 @@ export default function About() {
         }}
       />
 
-      {/* SOFT CANDY GLOWS */}
-      <div className="absolute -top-44 left-0 w-[500px] h-[500px] bg-[#CCFF00]/5 blur-[150px]" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#FF8B72]/5 blur-[150px]" />
+      <div className="absolute -top-40 -left-40 w-[420px] h-[420px] rounded-full bg-[#CCFF00]/5 blur-[120px]" />
+      <div className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-[#FF8B72]/5 blur-[120px]" />
 
-      <div className="relative max-w-6xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-auto px-6">
 
-        {/* ================= HEADING ================= */}
+        {/* ================= HEADER ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center"
+        >
+          <span className="font-mono uppercase tracking-[.4em] text-xs text-[#CCFF00]">
+            ABOUT ME
+          </span>
 
+          <h2 className="mt-6 text-5xl font-bold text-white">
+            Turning Ideas Into
+            <br />
+            Digital Experiences
+          </h2>
+
+          <p className="mt-8 max-w-3xl mx-auto text-lg leading-9 text-slate-400">
+            Saya merupakan mahasiswa Sistem Informasi di Universitas Pembangunan Nasional "Veteran" Jawa Timur dengan latar belakang Multimedia. Saya memiliki ketertarikan dalam memahami kebutuhan pengguna, menganalisis proses bisnis, merancang antarmuka yang intuitif, serta mengembangkan solusi digital yang memberikan pengalaman terbaik bagi pengguna. Melalui berbagai proyek akademik maupun personal, saya terus mengembangkan kemampuan di bidang UI/UX Design, System Analysis, Web Development, dan Mobile Development.
+          </p>
+        </motion.div>
+
+        {/* ================= WHAT I DO ================= */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-center"
+          transition={{ duration: 0.7 }}
+          className="mt-28"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#CCFF00]/20 bg-[#CCFF00]/5 mb-4">
-            <span className="w-1 h-1 rounded-full bg-[#CCFF00]" />
-            <p className="text-[#CCFF00] uppercase tracking-[.35em] text-[10px] font-bold font-mono">
-              About Me
+          <div className="text-center">
+            <span className="font-mono uppercase tracking-[.35em] text-xs text-[#FF8B72]">
+              WHAT I DO
+            </span>
+            <h3 className="mt-5 text-4xl font-bold text-white">
+              Areas I Continue to Develop
+            </h3>
+            <p className="mt-6 text-slate-400 max-w-2xl mx-auto leading-8">
+              Saya terus mengembangkan kemampuan melalui berbagai proyek yang
+              menggabungkan analisis, desain, dan implementasi menjadi solusi
+              digital yang fungsional.
             </p>
           </div>
 
-          <h2 className="mt-2 text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Mengenal Saya Lebih Dekat
-          </h2>
-
-          <p className="mt-8 max-w-3xl mx-auto text-slate-400 leading-8 text-lg">
-            Saya adalah mahasiswa Sistem Informasi di Universitas
-            Pembangunan Nasional &quot;Veteran&quot; Jawa Timur yang memiliki
-            minat pada bidang system analysis, business process analysis,
-            UI/UX design, dan software development. Saya senang memahami
-            kebutuhan pengguna, menganalisis proses bisnis, serta merancang
-            solusi digital yang mudah digunakan dan memberikan nilai bagi
-            pengguna.
-          </p>
-
-          <div className="mt-8 flex flex-wrap justify-center gap-2.5">
-            {[
-              { text: "System Analysis", style: "border-[#CCFF00]/20 bg-[#CCFF00]/5 text-[#CCFF00]" },
-              { text: "Business Process Analysis", style: "border-[#FF8B72]/20 bg-[#FF8B72]/5 text-[#FF8B72]" },
-              { text: "UI/UX Design", style: "border-[#E3D5CA]/20 bg-[#E3D5CA]/5 text-[#E3D5CA]" },
-              { text: "Software Development", style: "border-[#CCFF00]/20 bg-[#CCFF00]/5 text-[#CCFF00]" }
-            ].map(
-              (tag) => (
-                <span
-                  key={tag.text}
-                  className={`rounded-full border px-4 py-1.5 font-mono text-xs font-semibold tracking-wide ${tag.style}`}
-                >
-                  {tag.text}
+          <div className="mt-16 grid md:grid-cols-2 gap-6">
+            {SERVICES.map((item) => (
+              <motion.div
+                key={item.number}
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.2 }}
+                className="group rounded-3xl border border-slate-800 bg-[#111827]/60 backdrop-blur-xl p-8 hover:border-[#CCFF00]/20 transition-all duration-300"
+              >
+                <span className="text-sm font-mono text-slate-500">
+                  {item.number}
                 </span>
-              )
-            )}
+                <h4 className="mt-4 text-2xl font-bold text-white">
+                  {item.title}
+                </h4>
+                <p className="mt-4 leading-8 text-slate-400">
+                  {item.description}
+                </p>
+                <div className="mt-8 h-px w-full bg-gradient-to-r from-[#CCFF00]/50 via-transparent to-transparent" />
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
-        {/* ================= CURRENT FOCUS ================= */}
-
+        {/* ================= MY APPROACH ================= */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
           className="mt-32"
         >
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#FF8B72]/20 bg-[#FF8B72]/5 mb-4">
-              <span className="w-1 h-1 rounded-full bg-[#FF8B72]" />
-              <p className="text-[#FF8B72] uppercase tracking-[.35em] text-[10px] font-bold font-mono">
-                Current Focus
+          <div className="rounded-[32px] border border-slate-800 bg-[#111827]/60 backdrop-blur-xl p-10 md:p-14">
+            <div className="text-center">
+              <span className="font-mono uppercase tracking-[.35em] text-xs text-[#E3D5CA]">
+                MY APPROACH
+              </span>
+              <h3 className="mt-5 text-4xl font-bold text-white">
+                How I Build Digital Solutions
+              </h3>
+              <p className="mt-6 max-w-3xl mx-auto leading-8 text-slate-400">
+                Dalam setiap proyek, saya berusaha memahami permasalahan terlebih dahulu,
+                kemudian merancang solusi yang tepat, dan mengimplementasikannya menjadi
+                produk digital yang mudah digunakan serta memberikan nilai bagi pengguna.
               </p>
             </div>
-            <h3 className="mt-2 text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-              Bidang yang Sedang Saya Kembangkan
-            </h3>
-            <p className="mt-8 max-w-3xl mx-auto text-slate-400 leading-8 text-lg">
-              Saya berfokus pada pengembangan solusi digital yang dimulai dari
-              memahami kebutuhan pengguna, menganalisis proses bisnis, hingga
-              merancang sistem yang efektif dan mudah digunakan.
-              <br className="hidden md:block" />
-              <br className="hidden md:block" />
-              Saat ini saya terus mengembangkan kemampuan di bidang{" "}
-              <span className="text-white font-semibold underline decoration-[#CCFF00] decoration-2 underline-offset-4">System Analysis</span>,{" "}
-              <span className="text-white font-semibold underline decoration-[#FF8B72] decoration-2 underline-offset-4">Business Analysis</span>,{" "}
-              <span className="text-white font-semibold underline decoration-[#E3D5CA] decoration-2 underline-offset-4">UI/UX Design</span>, dan{" "}
-              <span className="text-white font-semibold underline decoration-[#CCFF00] decoration-2 underline-offset-4">Software Development</span>{" "}
-              melalui berbagai proyek akademik maupun personal.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-5">
-            {FOCUS_ITEMS.map((item) => (
-              <motion.div
-                whileHover={{ y: -4 }}
-                key={item.code}
-                className={`group relative rounded-3xl border border-slate-800 bg-[#121722]/60 p-8 transition-all duration-300 ${item.color}`}
-              >
-                <div className="flex items-start gap-5">
-                  <span className="font-mono text-xs font-bold text-slate-600 group-hover:text-white transition-colors">
-                    // {item.code}
-                  </span>
-
-                  <div>
-                    <h4 className="text-white text-lg font-bold tracking-tight">
-                      {item.title}
-                    </h4>
-                    <p className="mt-2 text-sm text-slate-400 leading-6 font-normal">
-                      {item.desc}
-                    </p>
-                  </div>
+            <div className="mt-16 grid md:grid-cols-3 gap-8">
+              {/* STEP 1 */}
+              <div className="text-center">
+                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#CCFF00]/30 bg-[#CCFF00]/10">
+                  <span className="text-2xl font-black text-[#CCFF00]">01</span>
                 </div>
+                <h4 className="mt-6 text-xl font-bold text-white">Understand</h4>
+                <p className="mt-3 leading-7 text-slate-400">
+                  Memahami kebutuhan pengguna, tujuan bisnis, serta masalah yang ingin diselesaikan.
+                </p>
+              </div>
 
-                <span className={`absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent ${item.accent} transition-colors`} />
-              </motion.div>
-            ))}
+              {/* STEP 2 */}
+              <div className="text-center">
+                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#FF8B72]/30 bg-[#FF8B72]/10">
+                  <span className="text-2xl font-black text-[#FF8B72]">02</span>
+                </div>
+                <h4 className="mt-6 text-xl font-bold text-white">Design</h4>
+                <p className="mt-3 leading-7 text-slate-400">
+                  Merancang alur sistem, antarmuka, dan pengalaman pengguna yang sederhana dan efektif.
+                </p>
+              </div>
+
+              {/* STEP 3 */}
+              <div className="text-center">
+                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#E3D5CA]/30 bg-[#E3D5CA]/10">
+                  <span className="text-2xl font-black text-[#E3D5CA]">03</span>
+                </div>
+                <h4 className="mt-6 text-xl font-bold text-white">Develop</h4>
+                <p className="mt-3 leading-7 text-slate-400">
+                  Mengimplementasikan solusi menjadi aplikasi yang responsif, fungsional, dan mudah digunakan.
+                </p>
+              </div>
+            </div>
           </div>
         </motion.div>
 
