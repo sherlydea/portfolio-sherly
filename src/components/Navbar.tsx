@@ -79,7 +79,7 @@ export default function Navbar() {
         {/* Resume Button (DESKTOP REVISI: Dop Solid Tanpa Ikon) */}
         <div className="hidden lg:block">
           <a
-            href="/CV-sherlydeaaulia.pdf"
+            href="/CV_SHERLY DEA AULIA.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-xl bg-slate-800 border border-slate-700 px-5 py-2.5 text-xs font-bold tracking-wider text-[#CCFF00] transition-all duration-200 hover:bg-[#CCFF00] hover:text-[#0B0F17] hover:-translate-y-0.5 shadow-md"
@@ -122,7 +122,7 @@ export default function Navbar() {
 
               {/* Resume Button (MOBILE REVISI: Dop Solid Tanpa Ikon) */}
               <a
-                href="/CV-sherlydeaaulia.pdf"
+                href="/CV_SHERLY DEA AULIA.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 rounded-xl bg-slate-800 border border-slate-700 py-3 text-center text-xs font-bold tracking-wider text-[#CCFF00] transition-all duration-200 hover:bg-[#CCFF00] hover:text-[#0B0F17] active:bg-[#CCFF00]"
